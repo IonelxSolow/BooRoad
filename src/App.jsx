@@ -104,35 +104,35 @@ function App() {
       destinazione: "Parigi",
       dataInizio: "2025-06-10",
       dataFine: "2025-06-15",
-      immagineCopertina: "https://example.com/parigi.jpg",
+      immagineCopertina: "/paris.jpg",
     },
     {
       id: 2,
       destinazione: "Londra",
       dataInizio: "2025-07-05",
       dataFine: "2025-07-12",
-      immagineCopertina: "https://example.com/londra.jpg",
+      immagineCopertina: "/london.jpg",
     },
     {
       id: 3,
       destinazione: "Roma",
       dataInizio: "2025-08-01",
       dataFine: "2025-08-07",
-      immagineCopertina: "https://example.com/roma.jpg",
+      immagineCopertina: "/rome.jpg",
     },
     {
       id: 4,
       destinazione: "Barcellona",
       dataInizio: "2025-09-10",
       dataFine: "2025-09-18",
-      immagineCopertina: "https://example.com/barcellona.jpg",
+      immagineCopertina: "/barcelona.jpg",
     },
     {
       id: 5,
       destinazione: "Berlino",
       dataInizio: "2025-10-01",
       dataFine: "2025-10-08",
-      immagineCopertina: "https://example.com/berlino.jpg",
+      immagineCopertina: "/berlin.jpg",
     },
   ];
 
@@ -142,7 +142,7 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />} >
 
-            <Route path='/' Component={Homepage} />
+            <Route path='/' element={<Homepage destinazioni={destinazioni} clienti={clienti} />} />
 
           </Route>
         </Routes>
