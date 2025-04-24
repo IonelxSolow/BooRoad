@@ -28,11 +28,8 @@ export default function Header() {
                                 <li className="nav-item">
                                     <NavLink className="nav-link active" to="#" aria-current="page"
                                     >Home
-                                        <span className="visually-hidden">(current)</span></
-                                    NavLink>
-                                </li>
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" to="#">Rubrica</NavLink>
+                                        <span className="visually-hidden">(current)</span>
+                                    </NavLink>
                                 </li>
 
                             </ul>

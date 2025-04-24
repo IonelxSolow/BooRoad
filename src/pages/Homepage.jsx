@@ -8,7 +8,7 @@ export default function Homepage({ destinazioni }) {
             </div>
 
             <div className="container">
-                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3">
 
                     {destinazioni.map(destinazione => (
                         <div key={`destinazione${destinazione.id}`} className="col">
@@ -21,9 +21,12 @@ export default function Homepage({ destinazioni }) {
                                     <p>{destinazione.dataFine}</p>
                                     <h3>{destinazione.destinazione}</h3>
                                 </div>
-                                <button className="btn btn-primary">
-                                    Mostra dettagli
-                                </button>
+                                <Link to={`/details/${destinazione.id}`}>
+                                    <button className="btn btn-primary">
+                                        Mostra dettagli
+                                    </button>
+                                </Link>
+
                             </div>
                         </div>
                     ))}

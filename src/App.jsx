@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
+import Details from './pages/Details';
 import DefaultLayout from './layouts/DefaultLayout'
 
 
@@ -134,6 +135,27 @@ function App() {
       dataFine: "2025-10-08",
       immagineCopertina: "/berlin.jpg",
     },
+    {
+      id: 6,
+      destinazione: "Amsterdam",
+      dataInizio: "2025-11-15",
+      dataFine: "2025-11-20",
+      immagineCopertina: "/amsterdam.jpg",
+    },
+    {
+      id: 7,
+      destinazione: "Praga",
+      dataInizio: "2025-12-05",
+      dataFine: "2025-12-10",
+      immagineCopertina: "/praga.jpg",
+    },
+    {
+      id: 8,
+      destinazione: "Vienna",
+      dataInizio: "2026-01-10",
+      dataFine: "2026-01-15",
+      immagineCopertina: "/vienna.jpg",
+    },
   ];
 
   return (
@@ -143,6 +165,7 @@ function App() {
           <Route element={<DefaultLayout />} >
 
             <Route path='/' element={<Homepage destinazioni={destinazioni} clienti={clienti} />} />
+            <Route path='/details/:id' element={<Details />} />
 
           </Route>
         </Routes>
