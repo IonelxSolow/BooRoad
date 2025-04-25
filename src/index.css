@@ -26,6 +26,10 @@ header {
 
 }
 
+btn_card {
+    max-width: 50%;
+}
+
 footer {
     background-color: rgba(245, 245, 245, 1);
     height: 80px;

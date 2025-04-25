@@ -52,8 +52,8 @@ export const GlobalProvider = ({ children }) => {
         {
             id: 6,
             destinazione: "Amsterdam",
-            dataInizio: "2025-11-15",
-            dataFine: "2025-11-20",
+            dataInizio: "2025-04-24",
+            dataFine: "2025-05-02",
             immagineCopertina: "/amsterdam.jpg",
             numeroEmergenza: "+31 20 123 4567",
             luoghiDaVisitare: ["Casa di Anna Frank", "Museo Van Gogh", "Canali di Amsterdam", "Piazza Dam", "Rijksmuseum", "Vondelpark"]

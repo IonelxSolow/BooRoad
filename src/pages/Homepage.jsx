@@ -20,6 +20,15 @@ export default function Homepage() {
             return "bg-danger"; // In corso
         }
     };
+    const getBadgeStatus = (dataInizio, dataFine) => {
+        if (dataInizio > currentDate) {
+            return "In programma"; // In programma
+        } else if (dataFine < currentDate) {
+            return "Passato"; // Passato
+        } else {
+            return "In corso"; // In corso
+        }
+    };
 
     return (
         <>
@@ -42,7 +51,7 @@ export default function Homepage() {
                                 <div className="card-body d-flex flex-column">
                                     <div className="d-flex justify-content-between align-items-center mb-3">
                                         <h5 className="card-title">{destinazione.destinazione}</h5>
-                                        <span className={`badge rounded-pill ${getBadgeClass(destinazione.dataInizio, destinazione.dataFine)}`} ><i className="bi bi-airplane"> </i>
+                                        <span className={`badge rounded-pill ${getBadgeClass(destinazione.dataInizio, destinazione.dataFine)}`} ><i className="bi bi-airplane"> {getBadgeStatus(destinazione.dataInizio, destinazione.dataFine)}</i>
                                         </span>
 
                                     </div>
@@ -51,10 +60,11 @@ export default function Homepage() {
                                     </p>
                                     <Link
                                         to={`/details/${destinazione.id}`}
-                                        className="btn btn-primary mt-auto"
+                                        className="btn btn-primary mt-auto btn_card"
                                         data-mdb-ripple-init
                                     >
-                                        Mostra dettagli
+                                        Mostra dettagli <i class="bi bi-arrow-right"></i>
+
                                     </Link>
                                 </div>
                             </div>
