@@ -1,8 +1,10 @@
 
-
 import { Link } from "react-router-dom";
+import { useGlobal } from "../contexts/GlobalContext";
 
-export default function Homepage({ destinazioni }) {
+export default function Homepage() {
+    const { destinazioni } = useGlobal()
+
     return (
         <>
             <div className="container">

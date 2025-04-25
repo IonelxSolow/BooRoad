@@ -1,9 +1,9 @@
-import React, { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from "react";
 
-const TravelContext = createContext();
+export const GlobalContext = createContext();
 
-export const TravelProvider = ({ children }) => {
-    const [trips, setTrips] = useState([
+export const GlobalProvider = ({ children }) => {
+    const [destinazioni, setDestinazioni] = useState([
         {
             id: 1,
             destinazione: "Parigi",
@@ -62,7 +62,7 @@ export const TravelProvider = ({ children }) => {
         },
     ]);
 
-    const [viaggiatori, setViaggiatori] = useState([
+    const [clienti, setClienti] = useState([
         {
             id: 1,
             viaggiAssociati: [1],
@@ -291,12 +291,14 @@ export const TravelProvider = ({ children }) => {
     ]);
 
     return (
-        <TravelContext.Provider value={{ trips, setTrips, viaggiatori, setViaggiatori }}>
+        <GlobalContext.Provider value={{ clienti, destinazioni }}>
             {children}
-        </TravelContext.Provider>
+        </GlobalContext.Provider>
     );
 };
 
-export const useTravel = () => useContext(TravelContext);
+function useGlobal() {
+    return useContext(GlobalContext);
+}
 
-
+export { useGlobal };
