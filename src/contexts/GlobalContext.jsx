@@ -7,9 +7,11 @@ export const GlobalProvider = ({ children }) => {
         {
             id: 1,
             destinazione: "Parigi",
-            dataInizio: "2025-06-10",
-            dataFine: "2025-06-15",
+            dataInizio: "2023-06-10",
+            dataFine: "2023-06-15",
             immagineCopertina: "/paris.jpg",
+            numeroEmergenza: "+33 1 23 45 67 89",
+            luoghiDaVisitare: ["Torre Eiffel", "Museo del Louvre", "Cattedrale di Notre-Dame", "Montmartre", "Arco di Trionfo", "Giardini di Lussemburgo"]
         },
         {
             id: 2,
@@ -17,13 +19,17 @@ export const GlobalProvider = ({ children }) => {
             dataInizio: "2025-07-05",
             dataFine: "2025-07-12",
             immagineCopertina: "/london.jpg",
+            numeroEmergenza: "+44 20 7946 0958",
+            luoghiDaVisitare: ["Big Ben", "London Eye", "Torre di Londra", "Buckingham Palace", "Hyde Park", "Museo di Storia Naturale"]
         },
         {
             id: 3,
             destinazione: "Roma",
-            dataInizio: "2025-08-01",
-            dataFine: "2025-08-07",
+            dataInizio: "2023-08-01",
+            dataFine: "2023-08-07",
             immagineCopertina: "/rome.jpg",
+            numeroEmergenza: "+39 06 123 4567",
+            luoghiDaVisitare: ["Colosseo", "Fontana di Trevi", "Piazza San Pietro", "Pantheon", "Piazza Navona", "Foro Romano"]
         },
         {
             id: 4,
@@ -31,13 +37,17 @@ export const GlobalProvider = ({ children }) => {
             dataInizio: "2025-09-10",
             dataFine: "2025-09-18",
             immagineCopertina: "/barcelona.jpg",
+            numeroEmergenza: "+34 93 123 4567",
+            luoghiDaVisitare: ["Sagrada Familia", "Parco Güell", "La Rambla", "Casa Batlló", "Montjuïc", "Mercato della Boqueria"]
         },
         {
             id: 5,
             destinazione: "Berlino",
-            dataInizio: "2025-10-01",
-            dataFine: "2025-10-08",
+            dataInizio: "2023-10-01",
+            dataFine: "2023-10-08",
             immagineCopertina: "/berlin.jpg",
+            numeroEmergenza: "+49 30 12345678",
+            luoghiDaVisitare: ["Porta di Brandeburgo", "Muro di Berlino", "Reichstag", "Isola dei Musei", "Alexanderplatz", "Checkpoint Charlie"]
         },
         {
             id: 6,
@@ -45,13 +55,17 @@ export const GlobalProvider = ({ children }) => {
             dataInizio: "2025-11-15",
             dataFine: "2025-11-20",
             immagineCopertina: "/amsterdam.jpg",
+            numeroEmergenza: "+31 20 123 4567",
+            luoghiDaVisitare: ["Casa di Anna Frank", "Museo Van Gogh", "Canali di Amsterdam", "Piazza Dam", "Rijksmuseum", "Vondelpark"]
         },
         {
             id: 7,
             destinazione: "Praga",
-            dataInizio: "2025-12-05",
-            dataFine: "2025-12-10",
+            dataInizio: "2023-12-05",
+            dataFine: "2023-12-10",
             immagineCopertina: "/praga.jpg",
+            numeroEmergenza: "+420 2 123 45678",
+            luoghiDaVisitare: ["Ponte Carlo", "Castello di Praga", "Piazza della Città Vecchia", "Orologio Astronomico", "Cattedrale di San Vito", "Collina di Petřín"]
         },
         {
             id: 8,
@@ -59,6 +73,8 @@ export const GlobalProvider = ({ children }) => {
             dataInizio: "2026-01-10",
             dataFine: "2026-01-15",
             immagineCopertina: "/vienna.jpg",
+            numeroEmergenza: "+43 1 123 4567",
+            luoghiDaVisitare: ["Palazzo di Schönbrunn", "Cattedrale di Santo Stefano", "Opera di Vienna", "Belvedere", "Prater", "Museo di Storia dell'Arte"]
         },
     ]);
 

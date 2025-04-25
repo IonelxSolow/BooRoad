@@ -3,7 +3,23 @@ import { Link } from "react-router-dom";
 import { useGlobal } from "../contexts/GlobalContext";
 
 export default function Homepage() {
-    const { destinazioni } = useGlobal()
+    const { destinazioni } = useGlobal();
+
+    // Ordina le destinazioni in base alla data di inizio (dataInizio)
+    destinazioni.sort((b, a) => new Date(a.dataInizio) - new Date(b.dataInizio));
+    const now = new Date()
+    const currentDate = now.toISOString().split("T")[0]; // Formato YYYY-MM-DD
+
+    // cambia il colore del badge in base alla data di inizio e fine
+    const getBadgeClass = (dataInizio, dataFine) => {
+        if (dataInizio > currentDate) {
+            return "bg-success"; // In programma
+        } else if (dataFine < currentDate) {
+            return "bg-secondary"; // Passato
+        } else {
+            return "bg-danger"; // In corso
+        }
+    };
 
     return (
         <>
@@ -14,7 +30,7 @@ export default function Homepage() {
 
             <div className="container py-5">
                 <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4 p ">
-                    {destinazioni.map(destinazione => (
+                    {destinazioni.sort().map(destinazione => (
                         <div key={`destinazione${destinazione.id}`} className="col">
                             <div className="card h-100 border-0 shadow-sm hover-shadow">
                                 <img
@@ -24,7 +40,12 @@ export default function Homepage() {
                                     style={{ objectFit: "cover", height: "200px" }}
                                 />
                                 <div className="card-body d-flex flex-column">
-                                    <h5 className="card-title">{destinazione.destinazione}</h5>
+                                    <div className="d-flex justify-content-between align-items-center mb-3">
+                                        <h5 className="card-title">{destinazione.destinazione}</h5>
+                                        <span className={`badge rounded-pill ${getBadgeClass(destinazione.dataInizio, destinazione.dataFine)}`} ><i className="bi bi-airplane"> </i>
+                                        </span>
+
+                                    </div>
                                     <p className="card-text text-muted">
                                         Dal {destinazione.dataInizio} al {destinazione.dataFine}
                                     </p>
