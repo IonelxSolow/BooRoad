@@ -60,7 +60,7 @@ export default function Homepage() {
                                     </p>
                                     <Link
                                         to={`/details/${destinazione.id}`}
-                                        className="btn btn-primary mt-auto btn_card"
+                                        className=" btn_card"
                                         data-mdb-ripple-init
                                     >
                                         Mostra dettagli <i class="bi bi-arrow-right"></i>
