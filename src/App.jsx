@@ -1,7 +1,9 @@
 import React from 'react'
+import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Details from './pages/Details';
+import Contact from './pages/Contact';
 import DefaultLayout from './layouts/DefaultLayout'
 
 
@@ -166,6 +168,7 @@ function App() {
 
             <Route path='/' element={<Homepage destinazioni={destinazioni} clienti={clienti} />} />
             <Route path='/details/:id' element={<Details />} />
+            <Route path='/contact' element={<Contact />} />
 
           </Route>
         </Routes>

@@ -2,7 +2,10 @@ export default function Details() {
     return (
 
         <>
-            <h1>DETAILS</h1>
+            <div className="container py-5">
+                <h1>DETAILS</h1>
+
+            </div>
         </>
 
     )
