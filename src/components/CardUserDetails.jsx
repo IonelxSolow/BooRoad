@@ -32,6 +32,8 @@ export default function CardUserDetails({ id, onClick }) {
                     </div>
                     <div className="card-footer text-center  border-top " style={{ background: "inherit", borderColor: "inherit" }}>
                         <a href={`tel:${telefono}`} className="btn fs-4 "><i className="bi bi-telephone"></i></a>
+                        <a href={`sms:${telefono}`} className="btn fs-4 "><i className="bi bi-chat-text"></i></a>
+                        <a href={`whatsapp:${telefono}`} className="btn fs-4 "><i className="bi bi-whatsapp"></i></a>
                         <a href={`mailto:${mail}`} className="btn fs-4 "><i className="bi bi-envelope"></i></a>
                     </div>
                 </div>
