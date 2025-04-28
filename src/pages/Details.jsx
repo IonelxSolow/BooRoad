@@ -13,8 +13,11 @@ export default function Details() {
     const currentDestination = destinazioni.find((destination) => destination.id === Number(id)) // recupero la destinazione corrente
 
     const handleSelect = (selectedIndex) => {
-        setIndex(selectedIndex);
-    };
+        setIndex(selectedIndex)
+    }
+
+    console.log(index);
+
 
     return (
         <>
@@ -25,15 +28,15 @@ export default function Details() {
             <div className="carousel_box container  ">
                 <Carousel className="rounded" activeIndex={index} onSelect={handleSelect}>
                     <Carousel.Item className="rounded-3">
-                        <img src={`/images${currentDestination.immagineCopertina}`} className="d-block w-100 rounded " alt="First slide" />
+                        <img src={`/images${currentDestination.immagini[index]}`} className="d-block w-100 rounded " alt="First slide" />
 
                     </Carousel.Item>
                     <Carousel.Item className="rounded-3">
-                        <img src="/images/paris_1.jpg" className="d-block w-100 rounded" alt="Second slide" />
+                        <img src={`/images${currentDestination.immagini[index]}`} className="d-block w-100 rounded" alt="Second slide" />
 
                     </Carousel.Item>
                     <Carousel.Item className="rounded-3">
-                        <img src="/images/paris_2.jpg" className="d-block w-100 rounded" alt="Third slide" />
+                        <img src={`/images${currentDestination.immagini[index]}`} className="d-block w-100 rounded" alt="Third slide" />
 
                     </Carousel.Item>
                 </Carousel>

@@ -60,6 +60,7 @@ export const GlobalProvider = ({ children }) => {
             dataInizio: "2025-04-24",
             dataFine: "2025-05-02",
             immagineCopertina: "/amsterdam.jpg",
+            immagini: ["/amsterdam.jpg", "/amsterdam_1.jpg", "/amsterdam_2.jpg"],
             numeroEmergenza: "+31 20 123 4567",
             luoghiDaVisitare: ["Casa di Anna Frank", "Museo Van Gogh", "Canali di Amsterdam", "Piazza Dam", "Rijksmuseum", "Vondelpark"]
         },
@@ -69,6 +70,7 @@ export const GlobalProvider = ({ children }) => {
             dataInizio: "2023-12-05",
             dataFine: "2023-12-10",
             immagineCopertina: "/praga.jpg",
+            immagini: ["/praga.jpg", "/praga_1.jpg", "/praga_2.jpg"],
             numeroEmergenza: "+420 2 123 45678",
             luoghiDaVisitare: ["Ponte Carlo", "Castello di Praga", "Piazza della Città Vecchia", "Orologio Astronomico", "Cattedrale di San Vito", "Collina di Petřín"]
         },
@@ -78,6 +80,7 @@ export const GlobalProvider = ({ children }) => {
             dataInizio: "2026-01-10",
             dataFine: "2026-01-15",
             immagineCopertina: "/vienna.jpg",
+            immagini: ["/vienna.jpg", "/vienna_1.jpg", "/vienna_2.jpg"],
             numeroEmergenza: "+43 1 123 4567",
             luoghiDaVisitare: ["Palazzo di Schönbrunn", "Cattedrale di Santo Stefano", "Opera di Vienna", "Belvedere", "Prater", "Museo di Storia dell'Arte"]
         },
