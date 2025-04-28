@@ -5,6 +5,7 @@ export default function CardUserDetails({ id, onClick }) {
 
     const { clienti, } = useGlobal()
 
+    console.log(id);
 
 
     const userDetails = clienti.find(cliente => cliente.id === id)
@@ -18,7 +19,7 @@ export default function CardUserDetails({ id, onClick }) {
             <div className=" user-details-overlay d-flex justify-content-center align-items-center body-secondary z-3">
 
                 <div className="card card-custom bg-white border-white border-0">
-                    <div className="card-custom-img text-end"><div className="btn border-0" onClick={onClick}><i class="bi bi-x-lg text-white"></i>
+                    <div className="card-custom-img text-end"><div className="btn border-0" onClick={onClick}><i className="bi bi-x-lg text-white"></i>
                     </div></div>
                     <div className="card-custom-avatar">
                         <img className="img-fluid" src={immaginePersona} alt="Avatar" />

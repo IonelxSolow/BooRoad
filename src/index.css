@@ -91,7 +91,7 @@ footer .bi-airplane {
 .user-details-overlay {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #0000009d;
