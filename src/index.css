@@ -77,8 +77,8 @@ footer {
     background-color: #0000009d;
 
     .card {
-        background-color: #11027f;
-        color: white;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
         border-radius: 10px;
 
         .card-header {
