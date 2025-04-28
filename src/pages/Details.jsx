@@ -22,7 +22,7 @@ export default function Details() {
     const handleDetails = (clientID) => {
 
         setClientSelected(clientID) // set the selected client ID
-        setviweDetails(!viweDetails)
+        setviweDetails(!viweDetails) //change view details state
     }
 
     return (
