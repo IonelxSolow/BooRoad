@@ -1,10 +1,9 @@
-
 import { Link } from "react-router-dom";
 import { useGlobal } from "../contexts/GlobalContext";
 
 export default function Homepage() {
-    const { destinazioni, currentTrip, setCurrentTrip } = useGlobal();
-    console.log(destinazioni)
+    const { destinazioni, setCurrentTrip } = useGlobal();
+
     // Ordina le destinazioni in base alla data di inizio (dataInizio)
     destinazioni.sort((b, a) => new Date(a.dataInizio) - new Date(b.dataInizio));
     const now = new Date()
@@ -29,10 +28,15 @@ export default function Homepage() {
             return "In corso"; // In corso
         }
     };
-    function getDestination(destinazione) {
-        setCurrentTrip(destinazione);
-        console.log(currentTrip);
 
+    function handleDestinationClick(destinazione) {
+        // Assicuriamoci che l'ID sia un numero
+        const tripWithNumericId = {
+            ...destinazione,
+            id: Number(destinazione.id)
+        };
+        console.log("Setting current trip with ID:", tripWithNumericId.id, "Type:", typeof tripWithNumericId.id);
+        setCurrentTrip(tripWithNumericId);
     }
 
     return (
@@ -44,7 +48,7 @@ export default function Homepage() {
 
             <div className="container py-5">
                 <div className="row row-cols-1 row-cols-sm-1 row-cols-lg-3 row-cols-xxl-4 g-4 p ">
-                    {destinazioni.sort().map(destinazione => (
+                    {destinazioni.map(destinazione => (
                         <div key={`destinazione${destinazione.id}`} className="col">
                             <div className="card h-100 border-0 shadow-sm hover-shadow">
                                 <img
@@ -56,29 +60,27 @@ export default function Homepage() {
                                 <div className="card-body d-flex flex-column">
                                     <div className="d-flex justify-content-between align-items-center mb-3">
                                         <h5 className="card-title">{destinazione.destinazione}</h5>
-                                        <span className={`badge rounded-pill ${getBadgeClass(destinazione.dataInizio, destinazione.dataFine)}`} ><i className="bi bi-airplane"> {getBadgeStatus(destinazione.dataInizio, destinazione.dataFine)}</i>
+                                        <span className={`badge rounded-pill ${getBadgeClass(destinazione.dataInizio, destinazione.dataFine)}`} >
+                                            <i className="bi bi-airplane"> {getBadgeStatus(destinazione.dataInizio, destinazione.dataFine)}</i>
                                         </span>
-
                                     </div>
                                     <p className="card-text text-muted">
                                         Dal {destinazione.dataInizio} al {destinazione.dataFine}
                                     </p>
                                     <Link
                                         to={`/details/${destinazione.id}`}
-                                        className=" btn_card w-75"
+                                        className="btn_card w-75"
                                         data-mdb-ripple-init
-                                        onClick={() => getDestination(destinazione)}
+                                        onClick={() => handleDestinationClick(destinazione)}
                                     >
                                         Mostra dettagli <i className="bi bi-arrow-right"></i>
-
                                     </Link>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
-            </div >
-
+            </div>
         </>
     );
 }
