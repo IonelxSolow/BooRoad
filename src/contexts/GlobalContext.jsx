@@ -39,8 +39,8 @@ export const GlobalProvider = ({ children }) => {
             destinazione: "Barcellona",
             dataInizio: "2025-09-10",
             dataFine: "2025-09-18",
-            immagineCopertina: "/barcelona.jpg",
-            immagini: ["/barcelona.jpg", "/barcelona_1.jpg", "/barcelona_2.jpg"],
+            immagineCopertina: "/barcellona.jpg",
+            immagini: ["/barcellona.jpg", "/barcellona_1.jpg", "/barcellona_2.jpg"],
             numeroEmergenza: "+34 93 123 4567",
             luoghiDaVisitare: ["Sagrada Familia", "Parco Güell", "La Rambla", "Casa Batlló", "Montjuïc", "Mercato della Boqueria"]
         },
