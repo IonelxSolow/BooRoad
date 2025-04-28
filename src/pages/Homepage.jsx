@@ -29,12 +29,6 @@ export default function Homepage() {
             return "In corso"; // In corso
         }
     };
-    function getDestination(destinazione) {
-        setCurrentTrip(destinazione);
-        console.log(currentTrip);
-        //DA SOSTITUIRE 
-
-    }
 
     return (
         <>
@@ -68,7 +62,6 @@ export default function Homepage() {
                                         to={`/details/${destinazione.id}`}
                                         className=" btn_card w-75"
                                         data-mdb-ripple-init
-                                        onClick={() => getDestination(destinazione)}  //DA SOSTITUIRE CON UN LINK
                                     >
                                         Mostra dettagli <i className="bi bi-arrow-right"></i>
 
