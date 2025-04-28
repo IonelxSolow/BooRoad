@@ -41,7 +41,7 @@ export default function Homepage() {
                 <div className="row row-cols-1 row-cols-sm-1 row-cols-lg-3 row-cols-xxl-4 g-4 p ">
                     {destinazioni.sort().map(destinazione => (
                         <div key={`destinazione${destinazione.id}`} className="col">
-                            <div className="card h-100 border-0 shadow-sm hover-shadow">
+                            <div className="card h-100 border-0 shadow-sm hover-shadow custom_hoover_card">
                                 <img
                                     src={`/images${destinazione.immagineCopertina}`}
                                     className="card-img-top img-fluid"

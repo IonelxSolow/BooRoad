@@ -23,6 +23,12 @@ header {
     font-size: 30px;
 }
 
+/* CSS per il hover sulle card della homepage */
+.custom_hoover_card:hover{
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
 .btn_card {
     max-width: 70%;
     padding: 10px 25px;
@@ -167,3 +173,5 @@ footer .bi-airplane {
     object-fit: cover;
     object-position: center;
 }
+
+

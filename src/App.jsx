@@ -6,6 +6,7 @@ import Details from './pages/Details';
 import Contact from './pages/Contact';
 import DefaultLayout from './layouts/DefaultLayout'
 import { GlobalProvider } from './contexts/GlobalContext';
+import About from './pages/About';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
               <Route path='/' element={<Homepage />} />
               <Route path='/details/:id' element={<Details />} />
               <Route path='/contact' element={<Contact />} />
+              <Route path='/about' element={<About />} />
 
             </Route>
           </Routes>
