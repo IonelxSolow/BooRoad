@@ -69,7 +69,7 @@ export default function Homepage() {
                                         data-mdb-ripple-init
                                         onClick={() => getDestination(destinazione)}
                                     >
-                                        Mostra dettagli <i class="bi bi-arrow-right"></i>
+                                        Mostra dettagli <i className="bi bi-arrow-right"></i>
 
                                     </Link>
                                 </div>
