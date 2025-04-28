@@ -148,3 +148,22 @@ footer .bi-airplane {
     }
 }
 
+
+.carousel_box {
+    height: 460px;
+
+}
+
+.carousel-item {
+    max-height: 460px;
+    background-color: #0000009d;
+
+
+}
+
+.caroulsel_img {
+    height: 460px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}

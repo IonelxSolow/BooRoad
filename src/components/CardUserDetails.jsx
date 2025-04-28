@@ -3,9 +3,8 @@ import { useGlobal } from "../contexts/GlobalContext"
 
 export default function CardUserDetails({ id, onClick }) {
 
-    const { clienti } = useGlobal()
+    const { clienti, } = useGlobal()
 
-    console.log(clienti);
 
 
     const userDetails = clienti.find(cliente => cliente.id === id)
@@ -16,7 +15,7 @@ export default function CardUserDetails({ id, onClick }) {
     return (
 
         <>
-            <div className=" user-details-overlay d-flex justify-content-center align-items-center body-secondary ">
+            <div className=" user-details-overlay d-flex justify-content-center align-items-center body-secondary z-3">
 
                 <div className="card card-custom bg-white border-white border-0">
                     <div className="card-custom-img text-end"><div className="btn border-0" onClick={onClick}><i class="bi bi-x-lg text-white"></i>
@@ -26,7 +25,7 @@ export default function CardUserDetails({ id, onClick }) {
                     </div>
                     <div className="card-body d-flex flex-column " >
                         <h4 className="card-title">{`${nome} ${cognome}`}</h4>
-                        <div className="card-text">      <p className="card-text">Email: {mail}</p>
+                        <div className="card-text"><p className="card-text">Email: {mail}</p>
                             <p className="card-text">Telefono: {telefono}</p>
                             <p className="card-text">CF: {codiceFiscale}</p></div>
                     </div>

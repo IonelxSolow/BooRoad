@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { useGlobal } from "../contexts/GlobalContext";
 
 export default function Homepage() {
-    const { destinazioni } = useGlobal();
-
+    const { destinazioni, currentTrip, setCurrentTrip } = useGlobal();
+    console.log(destinazioni)
     // Ordina le destinazioni in base alla data di inizio (dataInizio)
     destinazioni.sort((b, a) => new Date(a.dataInizio) - new Date(b.dataInizio));
     const now = new Date()
@@ -29,6 +29,11 @@ export default function Homepage() {
             return "In corso"; // In corso
         }
     };
+    function getDestination(destinazione) {
+        setCurrentTrip(destinazione);
+        console.log(currentTrip);
+
+    }
 
     return (
         <>
@@ -38,7 +43,7 @@ export default function Homepage() {
             </div>
 
             <div className="container py-5">
-                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4 p ">
+                <div className="row row-cols-1 row-cols-sm-1 row-cols-lg-3 row-cols-xxl-4 g-4 p ">
                     {destinazioni.sort().map(destinazione => (
                         <div key={`destinazione${destinazione.id}`} className="col">
                             <div className="card h-100 border-0 shadow-sm hover-shadow">
@@ -60,8 +65,9 @@ export default function Homepage() {
                                     </p>
                                     <Link
                                         to={`/details/${destinazione.id}`}
-                                        className=" btn_card"
+                                        className=" btn_card w-75"
                                         data-mdb-ripple-init
+                                        onClick={() => getDestination(destinazione)}
                                     >
                                         Mostra dettagli <i class="bi bi-arrow-right"></i>
 
@@ -71,52 +77,11 @@ export default function Homepage() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div >
 
         </>
     );
 }
 
-
-
-/* import { Link } from "react-router-dom"
-
-export default function Homepage({ destinazioni }) {
-    return (
-        <>
-            <div className="container">
-                <h1 className="mt-3 text-center ">Itinerari</h1>
-                <hr />
-            </div>
-
-            <div className="container py-4">
-                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3">
-
-                    {destinazioni.map(destinazione => (
-                        <div key={`destinazione${destinazione.id}`} className="col">
-                            <div className="card h-100 ">
-                                <img src={`/images${destinazione.immagineCopertina}`} className="card-img-top img-fluid h-100 " alt={destinazione.destinazione} />
-                                <div className="card-body">
-                                    <h5 className="card-title">{destinazione.destinazione}</h5>
-                                    <p className="card-text">
-                                        Dal {destinazione.dataInizio} al {destinazione.dataFine}
-                                    </p>
-                                    <Link to={`/details/${destinazione.id}`} className="btn btn-primary" data-mdb-ripple-init>
-                                        Mostra dettagli
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-
-                </div>
-            </div>
-
-        </>
-
-    )
-}
-
- */
 
 
