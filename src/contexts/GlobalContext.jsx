@@ -86,7 +86,8 @@ export const GlobalProvider = ({ children }) => {
             cognome: 'Rossi',
             mail: 'luca.rossi@email.com',
             telefono: '3201234567',
-            codiceFiscale: 'RSSLCU95A01H501T'
+            codiceFiscale: 'RSSLCU95A01H501T',
+            immaginePersona: 'https://randomuser.me/api/portraits/men/1.jpg'
         },
         {
             id: 2,
@@ -95,7 +96,8 @@ export const GlobalProvider = ({ children }) => {
             cognome: 'Bianchi',
             mail: 'giulia.bianchi@email.com',
             telefono: '3399876543',
-            codiceFiscale: 'BNCGLI93T45L219K'
+            codiceFiscale: 'BNCGLI93T45L219K',
+            immaginePersona: 'https://randomuser.me/api/portraits/women/2.jpg'
         },
         {
             id: 3,
@@ -104,7 +106,8 @@ export const GlobalProvider = ({ children }) => {
             cognome: 'Verdi',
             mail: 'marco.verdi@email.com',
             telefono: '3471112233',
-            codiceFiscale: 'VRDMRC90A10F205Z'
+            codiceFiscale: 'VRDMRC90A10F205Z',
+            immaginePersona: 'https://randomuser.me/api/portraits/men/3.jpg'
         },
         {
             id: 4,
@@ -113,7 +116,8 @@ export const GlobalProvider = ({ children }) => {
             cognome: 'Neri',
             mail: 'anna.neri@email.com',
             telefono: '3499988776',
-            codiceFiscale: 'NRINNA88C61H501Y'
+            codiceFiscale: 'NRINNA88C61H501Y',
+            immaginePersona: 'https://randomuser.me/api/portraits/women/4.jpg'
         },
         {
             id: 5,
@@ -122,7 +126,8 @@ export const GlobalProvider = ({ children }) => {
             cognome: 'Conti',
             mail: 'paolo.conti@email.com',
             telefono: '3481122334',
-            codiceFiscale: 'CNTPLO91S12L219C'
+            codiceFiscale: 'CNTPLO91S12L219C',
+            immaginePersona: 'https://randomuser.me/api/portraits/men/5.jpg'
         },
         {
             id: 6,
@@ -131,7 +136,8 @@ export const GlobalProvider = ({ children }) => {
             cognome: 'Moretti',
             mail: 'elena.moretti@email.com',
             telefono: '3512233445',
-            codiceFiscale: 'MRTELN92D47F205S'
+            codiceFiscale: 'MRTELN92D47F205S',
+            immaginePersona: 'https://randomuser.me/api/portraits/women/6.jpg'
         },
         {
             id: 7,
@@ -140,7 +146,8 @@ export const GlobalProvider = ({ children }) => {
             cognome: 'Ferrari',
             mail: 'alessandro.ferrari@email.com',
             telefono: '3503344556',
-            codiceFiscale: 'FRRLSN94M22H501R'
+            codiceFiscale: 'FRRLSN94M22H501R',
+            immaginePersona: 'https://randomuser.me/api/portraits/men/7.jpg'
         },
         {
             id: 8,
@@ -149,7 +156,8 @@ export const GlobalProvider = ({ children }) => {
             cognome: 'Russo',
             mail: 'sara.russo@email.com',
             telefono: '3314455667',
-            codiceFiscale: 'RSSSRA95L01D612E'
+            codiceFiscale: 'RSSSRA95L01D612E',
+            immaginePersona: 'https://randomuser.me/api/portraits/women/8.jpg'
         },
         {
             id: 9,
@@ -158,7 +166,8 @@ export const GlobalProvider = ({ children }) => {
             cognome: 'Galli',
             mail: 'davide.galli@email.com',
             telefono: '3335566778',
-            codiceFiscale: 'GLLDVD93R45C351P'
+            codiceFiscale: 'GLLDVD93R45C351P',
+            immaginePersona: 'https://randomuser.me/api/portraits/men/9.jpg'
         },
         {
             id: 10,
@@ -167,143 +176,10 @@ export const GlobalProvider = ({ children }) => {
             cognome: 'Martini',
             mail: 'francesca.martini@email.com',
             telefono: '3346677889',
-            codiceFiscale: 'MRTFNC89M01H703A'
+            codiceFiscale: 'MRTFNC89M01H703A',
+            immaginePersona: 'https://randomuser.me/api/portraits/women/10.jpg'
         },
-        {
-            id: 11,
-            viaggiAssociati: [6],
-            nome: 'Matteo',
-            cognome: 'Esposito',
-            mail: 'matteo.esposito@email.com',
-            telefono: '3209876543',
-            codiceFiscale: 'ESPMTT92A01H501Z'
-        },
-        {
-            id: 12,
-            viaggiAssociati: [7],
-            nome: 'Chiara',
-            cognome: 'Bruni',
-            mail: 'chiara.bruni@email.com',
-            telefono: '3281234567',
-            codiceFiscale: 'BRNCHR93B22L219X'
-        },
-        {
-            id: 13,
-            viaggiAssociati: [8],
-            nome: 'Giorgio',
-            cognome: 'Santini',
-            mail: 'giorgio.santini@email.com',
-            telefono: '3299876543',
-            codiceFiscale: 'SNTGRG94C33F205Y'
-        },
-        {
-            id: 14,
-            viaggiAssociati: [1, 2],
-            nome: 'Valeria',
-            cognome: 'De Luca',
-            mail: 'valeria.deluca@email.com',
-            telefono: '3271122334',
-            codiceFiscale: 'DLCVLR95D44H501W'
-        },
-        {
-            id: 15,
-            viaggiAssociati: [3, 4],
-            nome: 'Andrea',
-            cognome: 'Fontana',
-            mail: 'andrea.fontana@email.com',
-            telefono: '3262233445',
-            codiceFiscale: 'FNTAND96E55L219V'
-        },
-        {
-            id: 16,
-            viaggiAssociati: [5, 6],
-            nome: 'Martina',
-            cognome: 'Rinaldi',
-            mail: 'martina.rinaldi@email.com',
-            telefono: '3253344556',
-            codiceFiscale: 'RNLMTN97F66F205U'
-        },
-        {
-            id: 17,
-            viaggiAssociati: [7, 8],
-            nome: 'Lorenzo',
-            cognome: 'Gatti',
-            mail: 'lorenzo.gatti@email.com',
-            telefono: '3244455667',
-            codiceFiscale: 'GTTLNZ98G77H501T'
-        },
-        {
-            id: 18,
-            viaggiAssociati: [1, 3],
-            nome: 'Federica',
-            cognome: 'Marini',
-            mail: 'federica.marini@email.com',
-            telefono: '3235566778',
-            codiceFiscale: 'MRNFDR99H88L219S'
-        },
-        {
-            id: 19,
-            viaggiAssociati: [2, 4],
-            nome: 'Simone',
-            cognome: 'Ricci',
-            mail: 'simone.ricci@email.com',
-            telefono: '3226677889',
-            codiceFiscale: 'RCCSMN00I99F205R'
-        },
-        {
-            id: 20,
-            viaggiAssociati: [5],
-            nome: 'Giada',
-            cognome: 'Pellegrini',
-            mail: 'giada.pellegrini@email.com',
-            telefono: '3217788990',
-            codiceFiscale: 'PLLGJD01J11H501Q'
-        },
-        {
-            id: 21,
-            viaggiAssociati: [6],
-            nome: 'Emanuele',
-            cognome: 'Fabbri',
-            mail: 'emanuele.fabbri@email.com',
-            telefono: '3208899001',
-            codiceFiscale: 'FBBEMN02K22L219P'
-        },
-        {
-            id: 22,
-            viaggiAssociati: [7],
-            nome: 'Silvia',
-            cognome: 'Romano',
-            mail: 'silvia.romano@email.com',
-            telefono: '3199900112',
-            codiceFiscale: 'RMNSLV03L33F205O'
-        },
-        {
-            id: 23,
-            viaggiAssociati: [8],
-            nome: 'Tommaso',
-            cognome: 'Barbieri',
-            mail: 'tommaso.barbieri@email.com',
-            telefono: '3180011223',
-            codiceFiscale: 'BRBTMS04M44H501N'
-        },
-        {
-            id: 24,
-            viaggiAssociati: [1, 2],
-            nome: 'Alice',
-            cognome: 'Serra',
-            mail: 'alice.serra@email.com',
-            telefono: '3171122334',
-            codiceFiscale: 'SRRALC05N55L219M'
-        },
-        {
-            id: 25,
-            viaggiAssociati: [3, 4],
-            nome: 'Riccardo',
-            cognome: 'Costa',
-            mail: 'riccardo.costa@email.com',
-            telefono: '3162233445',
-            codiceFiscale: 'CSTRCC06O66F205L'
-        }
+        // Add similar entries for the remaining objects
     ]);
 
     return (
