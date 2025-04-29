@@ -3,6 +3,8 @@ import { useGlobal } from "../contexts/GlobalContext"
 import CardUserDetails from "../components/CardUserDetails";
 import Carousel from "react-bootstrap/Carousel";
 import { useParams } from "react-router-dom";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 export default function Details() {
   const [viweDetails, setviweDetails] = useState(false);
@@ -11,6 +13,16 @@ export default function Details() {
   const { destinazioni, clienti } = useGlobal()
   const [clientSelected, setClientSelected] = useState(null) // stato per il cliente selezionato
   const [searchTerm, setSearchTerm] = useState("") // stato per il termine di ricerca
+  const [showModal, setShowModal] = useState(false); // stato per il modal
+  const [newTraveler, setNewTraveler] = useState({
+
+    nome: "",
+    cognome: "",
+    mail: "",
+    telefono: "",
+    codiceFiscale: "",
+    immaginePersona: "",
+  }); // stato per il nuovo viaggiatore
 
   const currentDestination = destinazioni.find((destination) => destination.id === Number(id)) // recupero la destinazione corrente
 
@@ -27,6 +39,36 @@ export default function Details() {
     setClientSelected(clientID) // set the selected client ID
     setviweDetails(!viweDetails) //change view details state
   }
+
+  const handleAddTraveler = () => {
+    if (
+      newTraveler.nome &&
+      newTraveler.cognome &&
+      newTraveler.mail &&
+      newTraveler.telefono &&
+      newTraveler.codiceFiscale
+    ) {
+      const isMale = newTraveler.nome.toLowerCase().endsWith("o"); // deduzione semplice del genere
+      const newClient = {
+        id: clienti.length + 1, // genera un nuovo ID
+        ...newTraveler,
+        immaginePersona: isMale
+          ? `https://randomuser.me/api/portraits/men/${clienti.length + 1}.jpg`
+          : `https://randomuser.me/api/portraits/women/${clienti.length + 1}.jpg`,
+        viaggiAssociati: [Number(id)], // associa il nuovo viaggiatore al viaggio corrente
+      };
+      clienti.push(newClient); // aggiungi il nuovo viaggiatore alla lista dei clienti
+      setShowModal(false); // chiudi il modal
+      setNewTraveler({
+        nome: "",
+        cognome: "",
+        mail: "",
+        telefono: "",
+        codiceFiscale: "",
+        immaginePersona: "",
+      }); // resetta il form
+    }
+  };
 
   return (
     <>
@@ -63,14 +105,19 @@ export default function Details() {
       <div className="container mt-5">
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h3 className="mb-4">Viaggiatori ({viaggiatoriFiltrati.length})</h3>
-          <input
-            className="form-control me-2 w-25"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+          <div className="d-flex">
+            <input
+              className="form-control me-2 w-25"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <Button variant="primary" onClick={() => setShowModal(true)}>
+              Aggiungi Viaggiatore
+            </Button>
+          </div>
         </div>
 
         <div className="table-responsive ">
@@ -116,6 +163,86 @@ export default function Details() {
           </table>
         </div>
       </div>
+
+      {/* Modal per aggiungere un nuovo viaggiatore */}
+      <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Aggiungi Nuovo Viaggiatore</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <form>
+            <div className="mb-3">
+              <label htmlFor="nome" className="form-label">
+                Nome
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="nome"
+                value={newTraveler.nome}
+                onChange={(e) => setNewTraveler({ ...newTraveler, nome: e.target.value })}
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="cognome" className="form-label">
+                Cognome
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="cognome"
+                value={newTraveler.cognome}
+                onChange={(e) => setNewTraveler({ ...newTraveler, cognome: e.target.value })}
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="mail" className="form-label">
+                Email
+              </label>
+              <input
+                type="email"
+                className="form-control"
+                id="mail"
+                value={newTraveler.mail}
+                onChange={(e) => setNewTraveler({ ...newTraveler, mail: e.target.value })}
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="telefono" className="form-label">
+                Telefono
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="telefono"
+                value={newTraveler.telefono}
+                onChange={(e) => setNewTraveler({ ...newTraveler, telefono: e.target.value })}
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="codiceFiscale" className="form-label">
+                Codice Fiscale
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="codiceFiscale"
+                value={newTraveler.codiceFiscale}
+                onChange={(e) => setNewTraveler({ ...newTraveler, codiceFiscale: e.target.value })}
+              />
+            </div>
+
+          </form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Chiudi
+          </Button>
+          <Button variant="primary" onClick={handleAddTraveler}>
+            Aggiungi
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 }
