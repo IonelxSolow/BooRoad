@@ -8,6 +8,7 @@ import DefaultLayout from './layouts/DefaultLayout'
 import { GlobalProvider } from './contexts/GlobalContext';
 import About from './pages/About';
 import ScrollToTop from "./components/ScrollToTop";
+import Dashboard from './pages/Dashboard';
 
 
 
@@ -26,6 +27,7 @@ function App() {
               <Route path='/details/:id' element={<Details />} />
               <Route path='/contact' element={<Contact />} />
               <Route path='/about' element={<About />} />
+              <Route path='/dashboard' element={<Dashboard />} />
 
             </Route>
           </Routes>
