@@ -8,7 +8,7 @@ export default function About() {
             </div>
             <div className="container mt-5">
                 <h3>Funzionalità principali</h3>
-                <p>Con la nostra piataforma puoi:</p>
+                <p>Con la nostra piattaforma puoi:</p>
                 <div className="row row-cols-4">
 
                     <div className="col">

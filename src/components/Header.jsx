@@ -34,6 +34,11 @@ export default function Header() {
                                         Contact
                                     </NavLink>
                                 </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/about">
+                                        About
+                                    </NavLink>
+                                </li>
                             </ul>
 
                         </div>
