@@ -9,7 +9,7 @@ export default function About() {
             <div className="container mt-5">
                 <h3>Funzionalità principali</h3>
                 <p>Con la nostra piattaforma puoi:</p>
-                <div className="row row-cols-4">
+                <div className="row row-cols-4row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xxl-4 g-4">
 
                     <div className="col">
                         <div className="card h-100">
@@ -64,7 +64,7 @@ export default function About() {
                 <div className="container mt-5">
                     <p>La Booroad Coordinator App nasce per aiutarti a organizzare e gestire al meglio ogni esperienza di viaggio, mantenendo il contatto con i partecipanti sempre rapido, efficiente e sicuro.</p>
 
-                    <p>Che tu debba inviare informazioni importanti, gestire richieste o semplicemente mantenere il gruppo aggiornato, ora hai tutto quello che ti serve, in un’unica piattaforma.</p>
+                    <p className="mb-0">Che tu debba inviare informazioni importanti, gestire richieste o semplicemente mantenere il gruppo aggiornato, ora hai tutto quello che ti serve, in un’unica piattaforma.</p>
                 </div>
             </div>
 

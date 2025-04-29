@@ -13,7 +13,20 @@ main {
 
 header {
     background-color: rgba(245, 245, 245, 1);
+
+    .logo_container {
+        max-height: 80px;
+
+
+
+        .img_logo {
+            max-height: 80px;
+            max-width: 80px;
+            margin-left: 20px;
+        }
+    }
 }
+
 
 .nav_bar {
     height: 80px;
@@ -22,6 +35,16 @@ header {
 .nav_bar .navbar-brand {
     font-size: 30px;
 }
+
+.nav-link {
+    color: #1f84e1
+}
+
+.titolo {
+    font-size: 4rem;
+    color: #1f84e1
+}
+
 
 /* CSS per il hover sulle card della homepage */
 .custom_hoover_card:hover {
@@ -183,4 +206,16 @@ footer .bi-airplane {
     background-position: center;
     border-color: inherit;
     background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg)
+}
+
+.menu_tendina {
+    background-color: none;
+}
+
+@media screen and (max-width: 575px) {
+    .menu_tendina {
+        background-color: rgba(245, 245, 245, 1);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+    }
 }

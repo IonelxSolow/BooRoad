@@ -7,6 +7,8 @@ import Contact from './pages/Contact';
 import DefaultLayout from './layouts/DefaultLayout'
 import { GlobalProvider } from './contexts/GlobalContext';
 import About from './pages/About';
+import ScrollToTop from "./components/ScrollToTop";
+
 
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
     <>
       <GlobalProvider>
         <BrowserRouter>
+          <ScrollToTop />
+
           <Routes>
 
             <Route element={<DefaultLayout />} >

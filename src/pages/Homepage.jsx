@@ -33,12 +33,12 @@ export default function Homepage() {
     return (
         <>
             <div className="container">
-                <h1 className=" text-center ">Itinerari</h1>
+                <h1 className=" text-center pt-5 titolo">Destinations</h1>
                 <hr />
             </div>
 
             <div className="container py-5">
-                <div className="row row-cols-1 row-cols-sm-1 row-cols-lg-3 row-cols-xxl-4 g-4 p ">
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-4  ">
                     {destinazioni.sort().map(destinazione => (
                         <div key={`destinazione${destinazione.id}`} className="col">
                             <div className="card h-100 border-0 shadow-sm hover-shadow custom_hoover_card">

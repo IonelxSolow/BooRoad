@@ -12,7 +12,19 @@ export const GlobalProvider = ({ children }) => {
             immagineCopertina: "/paris.jpg",
             immagini: ["/paris.jpg", "/paris_1.jpg", "/paris_2.jpg"],
             numeroEmergenza: "+33 1 23 45 67 89",
-            luoghiDaVisitare: ["Torre Eiffel", "Museo del Louvre", "Cattedrale di Notre-Dame", "Montmartre", "Arco di Trionfo", "Giardini di Lussemburgo"]
+            luoghiDaVisitare: [
+                "Torre Eiffel",
+                "Museo del Louvre",
+                "Cattedrale di Notre-Dame",
+                "Montmartre",
+                "Arco di Trionfo",
+                "Giardini di Lussemburgo",
+                "Museo d'Orsay",
+                "Palazzo di Versailles",
+                "Sainte-Chapelle",
+                "Quartiere Latino",
+                "Place de la Concorde"
+            ]
         },
         {
             id: 2,
@@ -22,7 +34,19 @@ export const GlobalProvider = ({ children }) => {
             immagineCopertina: "/london.jpg",
             immagini: ["/london.jpg", "/london_1.jpg", "/london_2.jpg"],
             numeroEmergenza: "+44 20 7946 0958",
-            luoghiDaVisitare: ["Big Ben", "London Eye", "Torre di Londra", "Buckingham Palace", "Hyde Park", "Museo di Storia Naturale"]
+            luoghiDaVisitare: [
+                "Big Ben",
+                "London Eye",
+                "Torre di Londra",
+                "Buckingham Palace",
+                "Hyde Park",
+                "Museo di Storia Naturale",
+                "Trafalgar Square",
+                "Abbazia di Westminster",
+                "Camden Market",
+                "Regent's Park",
+                "Kensington Palace"
+            ]
         },
         {
             id: 3,
@@ -32,7 +56,19 @@ export const GlobalProvider = ({ children }) => {
             immagineCopertina: "/rome.jpg",
             immagini: ["/rome.jpg", "/rome_1.jpg", "/rome_2.jpg"],
             numeroEmergenza: "+39 06 123 4567",
-            luoghiDaVisitare: ["Colosseo", "Fontana di Trevi", "Piazza San Pietro", "Pantheon", "Piazza Navona", "Foro Romano"]
+            luoghiDaVisitare: [
+                "Colosseo",
+                "Fontana di Trevi",
+                "Piazza San Pietro",
+                "Pantheon",
+                "Piazza Navona",
+                "Foro Romano",
+                "Castel Sant'Angelo",
+                "Villa Borghese",
+                "Basilica di San Giovanni in Laterano",
+                "Campo de' Fiori",
+                "Via Appia Antica"
+            ]
         },
         {
             id: 4,
@@ -42,7 +78,19 @@ export const GlobalProvider = ({ children }) => {
             immagineCopertina: "/barcellona.jpg",
             immagini: ["/barcellona.jpg", "/barcellona_1.jpg", "/barcellona_2.jpg"],
             numeroEmergenza: "+34 93 123 4567",
-            luoghiDaVisitare: ["Sagrada Familia", "Parco Güell", "La Rambla", "Casa Batlló", "Montjuïc", "Mercato della Boqueria"]
+            luoghiDaVisitare: [
+                "Sagrada Familia",
+                "Parco Güell",
+                "La Rambla",
+                "Casa Batlló",
+                "Montjuïc",
+                "Mercato della Boqueria",
+                "Cattedrale di Barcellona",
+                "Barceloneta Beach",
+                "Museo Picasso",
+                "Tibidabo",
+                "Poble Espanyol"
+            ]
         },
         {
             id: 5,
@@ -52,7 +100,19 @@ export const GlobalProvider = ({ children }) => {
             immagineCopertina: "/berlin.jpg",
             immagini: ["/berlin.jpg", "/berlin_1.jpg", "/berlin_2.jpg"],
             numeroEmergenza: "+49 30 12345678",
-            luoghiDaVisitare: ["Porta di Brandeburgo", "Muro di Berlino", "Reichstag", "Isola dei Musei", "Alexanderplatz", "Checkpoint Charlie"]
+            luoghiDaVisitare: [
+                "Porta di Brandeburgo",
+                "Muro di Berlino",
+                "Reichstag",
+                "Isola dei Musei",
+                "Alexanderplatz",
+                "Checkpoint Charlie",
+                "East Side Gallery",
+                "Tiergarten",
+                "Palazzo di Charlottenburg",
+                "Gendarmenmarkt",
+                "Memoriale dell'Olocausto"
+            ]
         },
         {
             id: 6,
@@ -62,7 +122,19 @@ export const GlobalProvider = ({ children }) => {
             immagineCopertina: "/amsterdam.jpg",
             immagini: ["/amsterdam.jpg", "/amsterdam_1.jpg", "/amsterdam_2.jpg"],
             numeroEmergenza: "+31 20 123 4567",
-            luoghiDaVisitare: ["Casa di Anna Frank", "Museo Van Gogh", "Canali di Amsterdam", "Piazza Dam", "Rijksmuseum", "Vondelpark"]
+            luoghiDaVisitare: [
+                "Casa di Anna Frank",
+                "Museo Van Gogh",
+                "Canali di Amsterdam",
+                "Piazza Dam",
+                "Rijksmuseum",
+                "Vondelpark",
+                "Heineken Experience",
+                "Mercato dei Fiori",
+                "Zoo Artis",
+                "Quartiere Jordaan",
+                "Palazzo Reale"
+            ]
         },
         {
             id: 7,
@@ -72,7 +144,19 @@ export const GlobalProvider = ({ children }) => {
             immagineCopertina: "/praga.jpg",
             immagini: ["/praga.jpg", "/praga_1.jpg", "/praga_2.jpg"],
             numeroEmergenza: "+420 2 123 45678",
-            luoghiDaVisitare: ["Ponte Carlo", "Castello di Praga", "Piazza della Città Vecchia", "Orologio Astronomico", "Cattedrale di San Vito", "Collina di Petřín"]
+            luoghiDaVisitare: [
+                "Ponte Carlo",
+                "Castello di Praga",
+                "Piazza della Città Vecchia",
+                "Orologio Astronomico",
+                "Cattedrale di San Vito",
+                "Collina di Petřín",
+                "Casa Danzante",
+                "Museo Nazionale",
+                "Torre delle Polveri",
+                "Isola di Kampa",
+                "Monastero di Strahov"
+            ]
         },
         {
             id: 8,
@@ -82,7 +166,19 @@ export const GlobalProvider = ({ children }) => {
             immagineCopertina: "/vienna.jpg",
             immagini: ["/vienna.jpg", "/vienna_1.jpg", "/vienna_2.jpg"],
             numeroEmergenza: "+43 1 123 4567",
-            luoghiDaVisitare: ["Palazzo di Schönbrunn", "Cattedrale di Santo Stefano", "Opera di Vienna", "Belvedere", "Prater", "Museo di Storia dell'Arte"]
+            luoghiDaVisitare: [
+                "Palazzo di Schönbrunn",
+                "Cattedrale di Santo Stefano",
+                "Opera di Vienna",
+                "Belvedere",
+                "Prater",
+                "Museo di Storia dell'Arte",
+                "Palazzo Hofburg",
+                "Naschmarkt",
+                "Museo Albertina",
+                "Donauturm",
+                "Hundertwasserhaus"
+            ]
         },
     ]);
 
