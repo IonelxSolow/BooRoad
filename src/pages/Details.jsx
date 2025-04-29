@@ -104,19 +104,17 @@ export default function Details() {
 
       <div className="container mt-5">
         <div className="d-flex justify-content-between align-items-center mb-4">
-          <h3 className="mb-4">Viaggiatori ({viaggiatoriFiltrati.length})</h3>
+          <h3 className="m-0">Viaggiatori ({viaggiatoriFiltrati.length})</h3>
           <div className="d-flex">
             <input
-              className="form-control me-2 w-25"
+              className="form-control me-2 "
               type="search"
               placeholder="Search"
               aria-label="Search"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <Button variant="primary" onClick={() => setShowModal(true)}>
-              Aggiungi Viaggiatore
-            </Button>
+
           </div>
         </div>
 
@@ -161,6 +159,12 @@ export default function Details() {
               )}
             </tbody>
           </table>
+          <div className="text-center mt-3 mb-3">
+            <Button variant="primary" onClick={() => setShowModal(true)}>
+              Aggiungi Viaggiatore
+            </Button>
+
+          </div>
         </div>
       </div>
 
