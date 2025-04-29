@@ -24,7 +24,7 @@ header {
 }
 
 /* CSS per il hover sulle card della homepage */
-.custom_hoover_card:hover{
+.custom_hoover_card:hover {
     transform: scale(1.02);
     transition: all 0.3s ease-in-out;
 }
@@ -175,3 +175,12 @@ footer .bi-airplane {
 }
 
 
+.card-about {
+    height: 100px;
+    min-height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: inherit;
+    background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg)
+}
